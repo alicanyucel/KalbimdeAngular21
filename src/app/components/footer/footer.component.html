@@ -1,0 +1,38 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>About</h4>
+      <p>Kalbimde adalah platform modern untuk berbagi cerita dan pengalaman.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li *ngFor="let link of quickLinks">
+          <app-footer-link
+            [label]="link.label"
+            [href]="link.href"
+            [withIcon]="true">
+          </app-footer-link>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <app-social-link
+          *ngFor="let social of socialLinks"
+          [icon]="social.icon"
+          [href]="social.link"
+          [label]="social.label"
+          size="medium">
+        </app-social-link>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ currentYear }} ali can yücel. All rights reserved.</p>
+  </div>
+</footer>

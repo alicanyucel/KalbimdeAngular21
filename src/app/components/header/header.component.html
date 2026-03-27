@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <h1>{{ appTitle }}</h1>
+    </div>
+
+    <nav class="header-nav">
+      <ul class="nav-menu">
+        <li *ngFor="let item of navItems">
+          <app-nav-link
+            [label]="item.label"
+            [href]="item.href"
+            [isActive]="item.isActive">
+          </app-nav-link>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <app-icon-link
+        *ngFor="let btn of headerButtons"
+        [icon]="btn.icon"
+        [title]="btn.title"
+        [variant]="btn.variant"
+        href="#">
+      </app-icon-link>
+    </div>
+  </div>
+</header>

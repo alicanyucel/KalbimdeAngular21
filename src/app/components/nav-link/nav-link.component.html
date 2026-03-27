@@ -1,0 +1,10 @@
+<nav class="nav-links">
+  <ul class="nav-menu">
+    <li *ngFor="let link of links" class="nav-item">
+      <a [href]="link.path" class="nav-item-link">
+        <i [class]="link.icon"></i>
+        <span>{{ link.label }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
